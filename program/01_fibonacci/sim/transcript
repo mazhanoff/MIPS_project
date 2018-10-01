@@ -1,0 +1,172 @@
+# do ../modelsim_script.tcl
+# -vlog01compat
+# +define+SIMULATION
+# +incdir+../../../src
+# +incdir+../../../testbench
+# ../../../src/*.v
+# ../../../testbench/*.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:08:38 on Sep 30,2018
+# vlog -reportprogress 300 -vlog01compat "+define+SIMULATION" "+incdir+../../../src" "+incdir+../../../testbench" ../../../src/sm_cpu.v ../../../src/sm_hex_display.v ../../../src/sm_register.v ../../../src/sm_rom.v ../../../src/sm_top.v ../../../testbench/testbench.v 
+# -- Compiling module sm_cpu
+# -- Compiling module sm_control
+# -- Compiling module sm_alu
+# -- Compiling module sm_register_file
+# -- Compiling module sm_hex_display
+# -- Compiling module sm_hex_display_8
+# -- Compiling module sm_register
+# -- Compiling module sm_register_we
+# -- Compiling module sm_rom
+# -- Compiling module sm_top
+# -- Compiling module sm_debouncer
+# -- Compiling module sm_clk_divider
+# -- Compiling module sm_testbench
+# 
+# Top level modules:
+# 	sm_hex_display
+# 	sm_hex_display_8
+# 	sm_testbench
+# End time: 21:08:38 on Sep 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.sm_testbench 
+# Start time: 21:08:38 on Sep 30,2018
+# Loading work.sm_testbench
+# Loading work.sm_top
+# Loading work.sm_debouncer
+# Loading work.sm_clk_divider
+# Loading work.sm_register_we
+# Loading work.sm_rom
+# Loading work.sm_cpu
+# Loading work.sm_register
+# Loading work.sm_register_file
+# Loading work.sm_alu
+# Loading work.sm_control
+#     0  pc =  x  pcaddr = xxxxxxxX  instr = 00004021   v0 = 0   addu  $8, $0, $0
+#     1  pc =  x  pcaddr = xxxxxxxX  instr = 00004021   v0 = 0   addu  $8, $0, $0
+#     2  pc =  0  pcaddr = 00000000  instr = 00004021   v0 = 0   addu  $8, $0, $0
+#     3  pc =  0  pcaddr = 00000000  instr = 00004021   v0 = 0   addu  $8, $0, $0
+#     4  pc =  0  pcaddr = 00000000  instr = 00004021   v0 = 0   addu  $8, $0, $0
+#     5  pc =  1  pcaddr = 00000004  instr = 24090001   v0 = 0   addiu $9, $0, 1
+#     6  pc =  2  pcaddr = 00000008  instr = 00091021   v0 = 0   addu  $2, $0, $9
+#     7  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 1   addu  $8, $8, $9
+#     8  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 1   addu  $2, $0, $8
+#     9  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 1   addu  $9, $8, $9
+#    10  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 1   addu  $2, $0, $9
+#    11  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 2   beq   $0, $0, -4
+#    12  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 2   addu  $8, $8, $9
+#    13  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 2   addu  $2, $0, $8
+#    14  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 3   addu  $9, $8, $9
+#    15  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 3   addu  $2, $0, $9
+#    16  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 5   beq   $0, $0, -4
+#    17  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 5   addu  $8, $8, $9
+#    18  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 5   addu  $2, $0, $8
+#    19  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 8   addu  $9, $8, $9
+#    20  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 8   addu  $2, $0, $9
+#    21  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 13   beq   $0, $0, -4
+#    22  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 13   addu  $8, $8, $9
+#    23  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 13   addu  $2, $0, $8
+#    24  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 21   addu  $9, $8, $9
+#    25  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 21   addu  $2, $0, $9
+#    26  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 34   beq   $0, $0, -4
+#    27  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 34   addu  $8, $8, $9
+#    28  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 34   addu  $2, $0, $8
+#    29  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 55   addu  $9, $8, $9
+#    30  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 55   addu  $2, $0, $9
+#    31  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 89   beq   $0, $0, -4
+#    32  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 89   addu  $8, $8, $9
+#    33  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 89   addu  $2, $0, $8
+#    34  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 144   addu  $9, $8, $9
+#    35  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 144   addu  $2, $0, $9
+#    36  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 233   beq   $0, $0, -4
+#    37  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 233   addu  $8, $8, $9
+#    38  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 233   addu  $2, $0, $8
+#    39  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 377   addu  $9, $8, $9
+#    40  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 377   addu  $2, $0, $9
+#    41  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 610   beq   $0, $0, -4
+#    42  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 610   addu  $8, $8, $9
+#    43  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 610   addu  $2, $0, $8
+#    44  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 987   addu  $9, $8, $9
+#    45  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 987   addu  $2, $0, $9
+#    46  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 1597   beq   $0, $0, -4
+#    47  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 1597   addu  $8, $8, $9
+#    48  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 1597   addu  $2, $0, $8
+#    49  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 2584   addu  $9, $8, $9
+#    50  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 2584   addu  $2, $0, $9
+#    51  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 4181   beq   $0, $0, -4
+#    52  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 4181   addu  $8, $8, $9
+#    53  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 4181   addu  $2, $0, $8
+#    54  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 6765   addu  $9, $8, $9
+#    55  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 6765   addu  $2, $0, $9
+#    56  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 10946   beq   $0, $0, -4
+#    57  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 10946   addu  $8, $8, $9
+#    58  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 10946   addu  $2, $0, $8
+#    59  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 17711   addu  $9, $8, $9
+#    60  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 17711   addu  $2, $0, $9
+#    61  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 28657   beq   $0, $0, -4
+#    62  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 28657   addu  $8, $8, $9
+#    63  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 28657   addu  $2, $0, $8
+#    64  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 46368   addu  $9, $8, $9
+#    65  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 46368   addu  $2, $0, $9
+#    66  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 75025   beq   $0, $0, -4
+#    67  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 75025   addu  $8, $8, $9
+#    68  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 75025   addu  $2, $0, $8
+#    69  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 121393   addu  $9, $8, $9
+#    70  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 121393   addu  $2, $0, $9
+#    71  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 196418   beq   $0, $0, -4
+#    72  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 196418   addu  $8, $8, $9
+#    73  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 196418   addu  $2, $0, $8
+#    74  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 317811   addu  $9, $8, $9
+#    75  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 317811   addu  $2, $0, $9
+#    76  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 514229   beq   $0, $0, -4
+#    77  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 514229   addu  $8, $8, $9
+#    78  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 514229   addu  $2, $0, $8
+#    79  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 832040   addu  $9, $8, $9
+#    80  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 832040   addu  $2, $0, $9
+#    81  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 1346269   beq   $0, $0, -4
+#    82  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 1346269   addu  $8, $8, $9
+#    83  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 1346269   addu  $2, $0, $8
+#    84  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 2178309   addu  $9, $8, $9
+#    85  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 2178309   addu  $2, $0, $9
+#    86  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 3524578   beq   $0, $0, -4
+#    87  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 3524578   addu  $8, $8, $9
+#    88  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 3524578   addu  $2, $0, $8
+#    89  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 5702887   addu  $9, $8, $9
+#    90  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 5702887   addu  $2, $0, $9
+#    91  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 9227465   beq   $0, $0, -4
+#    92  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 9227465   addu  $8, $8, $9
+#    93  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 9227465   addu  $2, $0, $8
+#    94  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 14930352   addu  $9, $8, $9
+#    95  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 14930352   addu  $2, $0, $9
+#    96  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 24157817   beq   $0, $0, -4
+#    97  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 24157817   addu  $8, $8, $9
+#    98  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 24157817   addu  $2, $0, $8
+#    99  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 39088169   addu  $9, $8, $9
+#   100  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 39088169   addu  $2, $0, $9
+#   101  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 63245986   beq   $0, $0, -4
+#   102  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 63245986   addu  $8, $8, $9
+#   103  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 63245986   addu  $2, $0, $8
+#   104  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 102334155   addu  $9, $8, $9
+#   105  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 102334155   addu  $2, $0, $9
+#   106  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 165580141   beq   $0, $0, -4
+#   107  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 165580141   addu  $8, $8, $9
+#   108  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 165580141   addu  $2, $0, $8
+#   109  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 267914296   addu  $9, $8, $9
+#   110  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 267914296   addu  $2, $0, $9
+#   111  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 433494437   beq   $0, $0, -4
+#   112  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 433494437   addu  $8, $8, $9
+#   113  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 433494437   addu  $2, $0, $8
+#   114  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 701408733   addu  $9, $8, $9
+#   115  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 701408733   addu  $2, $0, $9
+#   116  pc =  7  pcaddr = 0000001c  instr = 1000fffb   v0 = 1134903170   beq   $0, $0, -4
+#   117  pc =  3  pcaddr = 0000000c  instr = 01094021   v0 = 1134903170   addu  $8, $8, $9
+#   118  pc =  4  pcaddr = 00000010  instr = 00081021   v0 = 1134903170   addu  $2, $0, $8
+#   119  pc =  5  pcaddr = 00000014  instr = 01094821   v0 = 1836311903   addu  $9, $8, $9
+#   120  pc =  6  pcaddr = 00000018  instr = 00091021   v0 = 1836311903   addu  $2, $0, $9
+# Timeout
+# ** Note: $stop    : ../../../testbench/testbench.v(133)
+#    Time: 2410 ns  Iteration: 1  Instance: /sm_testbench
+# Break in Module sm_testbench at ../../../testbench/testbench.v line 133
+# 0 ps
+# 2530500 ps
+# End time: 21:16:09 on Sep 30,2018, Elapsed time: 0:07:31
+# Errors: 0, Warnings: 0
