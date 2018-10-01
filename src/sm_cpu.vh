@@ -15,6 +15,7 @@
 `define ALU_SRL     3'b011
 `define ALU_SLTU    3'b100
 `define ALU_SUBU    3'b101
+`define ALU_TRUE    3'b110
 
 //instruction operation code
 `define C_SPEC      6'b000000 // Special instructions (depends on function field)
