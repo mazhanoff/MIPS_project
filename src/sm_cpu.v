@@ -133,7 +133,6 @@ module sm_control
 
             { `C_BEQ,   `F_ANY  } : begin branch = 1'b1; condZero = 1'b1; aluControl = `ALU_SUBU; end
             { `C_BNE,   `F_ANY  } : begin branch = 1'b1; aluControl = `ALU_SUBU; end
-				{ `C_JR,   `F_ANY  } : begin branch = 1'b1; condZero = 1'b1; aluControl = `ALU_TRUE; end
         endcase
     end
 endmodule
@@ -143,7 +142,7 @@ module sm_alu
 (
     input  [31:0] srcA,
     input  [31:0] srcB,
-    input  [ 2:0] oper,
+    input  [ 3:0] oper,
     input  [ 4:0] shift,
     output        zero,
     output reg [31:0] result
@@ -157,7 +156,6 @@ module sm_alu
             `ALU_SRL  : result = srcB >> shift;
             `ALU_SLTU : result = (srcA < srcB) ? 1 : 0;
             `ALU_SUBU : result = srcA - srcB;
-				`ALU_TRUE : result = 1;
         endcase
     end
 
