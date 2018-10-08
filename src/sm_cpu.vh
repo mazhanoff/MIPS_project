@@ -31,9 +31,9 @@
                               //         Rt = Immed << 16
 `define C_BNE       6'b000101 // I-type, Branch on Not Equal
                               //         if (Rs != Rt) PC += (int)offset
-`define C_BGEZ      6'b001010 // I-type, Branch on Greater or Equal to Zero
+`define C_BGEZ      6'b000001 // I-type, Branch on Greater or Equal to Zero
                               //         if (rs>=0)  PC += (int)offset
-`define C_XORI      6'b001011 // I-type, XOR with Immediate
+`define C_XORI      6'b001110 // I-type, XOR with Immediate
                               //         Rd = Rs ^ const16
 
 //instruction function field
@@ -47,8 +47,8 @@
                               //         Rd = (Rs∅ < Rt∅) ? 1 : 0
 `define F_SUBU      6'b100011 // R-type, Unsigned Subtract
                               //         Rd = Rs – Rt
-`define F_NOR		6'b100100 // R-type, Logical OR-NOT 
+`define F_NOR		6'b100111 // R-type, Logical OR-NOT 
 							  // 		 Rd = ~(Rs | Rt)
-`define F_SLLV		6'b100101 // R-type, Shift Left Logical Variable
+`define F_SLLV		6'b000100 // R-type, Shift Left Logical Variable
 							  //  		 Rd = Rs << Rt[5:0]
 `define F_ANY       6'b??????
