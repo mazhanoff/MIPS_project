@@ -17,6 +17,8 @@
 `define ALU_SUBU    4'b0101
 `define ALU_NOR		4'b0110
 `define ALU_SLLV    4'b0111
+`define ALU_BGEZ    4'b1000
+`define ALU_XOR		4'b1001
 
 
 //instruction operation code
@@ -29,8 +31,10 @@
                               //         Rt = Immed << 16
 `define C_BNE       6'b000101 // I-type, Branch on Not Equal
                               //         if (Rs != Rt) PC += (int)offset
-`define C_ORI       6'b001010 // I-type, Logical OR with Immediate
-                              //         Rd = Rs | const16
+`define C_BGEZ      6'b001010 // I-type, Branch on Greater or Equal to Zero
+                              //         if (rs>=0)  PC += (int)offset
+`define C_XORI      6'b001011 // I-type, XOR with Immediate
+                              //         Rd = Rs ^ const16
 
 //instruction function field
 `define F_ADDU      6'b100001 // R-type, Integer Add Unsigned

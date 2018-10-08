@@ -1,0 +1,18 @@
+ Address    Code        Basic                     Source
+
+0x00400000  0x24090007  addiu $9,$0,0x000000075    init:		li $t1, 7
+0x00400004  0x240c0001  addiu $12,$0,0x00000006    			li $t4, 1
+0x00400008  0x24020000  addiu $2,$0,0x000000007    			li $v0, 0
+0x0040000c  0x012c5023  subu $10,$9,$12       8    L1:			subu $t2, $t1, $t4	## cur_num = num-1
+0x00400010  0x240b0000  addiu $11,$0,0x00000009    			li $t3, 0			## acc=0
+0x00400014  0x11400009  beq $10,$0,0x00000009 10   			beqz $t2, end
+0x00400018  0x11400005  beq $10,$0,0x00000005 11   L2:			beqz $t2, L4		## while(cur_num!=0)
+0x0040001c  0x14400001  bne $2,$0,0x00000001  12   			bnez $v0, L3		## if (result==0)
+0x00400020  0x01695821  addu $11,$11,$9       13   			addu $t3, $t3, $t1	## acc += num
+0x00400024  0x01625821  addu $11,$11,$2       14   L3:			addu $t3, $t3, $v0	## else
+0x00400028  0x014c5023  subu $10,$10,$12      15   			subu $t2, $t2, $t4	## acc += result
+0x0040002c  0x1000fffa  beq $0,$0,0xfffffffa  16   			beqz $0, L2			##
+0x00400030  0x000b1021  addu $2,$0,$11        17   L4:			move $v0, $t3		## result = acc
+0x00400034  0x012c4823  subu $9,$9,$12        18   			subu $t1, $t1, $t4	## num--
+0x00400038  0x1520fff4  bne $9,$0,0xfffffff4  19   			bnez $t1, L1		## while(num!=0)
+0x0040003c  0x1000ffff  beq $0,$0,0xffffffff  20   end:		beqz    $0,  end 
